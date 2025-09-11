@@ -3,6 +3,7 @@ extends CharacterBody2D
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 var canDoubleJump = true
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
  	# Gravidade
@@ -10,7 +11,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Pulo
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
 			canDoubleJump = true
@@ -18,8 +19,17 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 			canDoubleJump = false
 
-
-	var direction := Input.get_axis("ui_left", "ui_right")
+	# get the input direcion: -1, 0, 1
+	var direction := Input.get_axis("move_left", "move_right")
+	
+	if direction > 0: animated_sprite.flip_h = false
+	elif direction < 0: animated_sprite.flip_h = true
+	
+	if direction == 0:
+		animated_sprite.play("idle")
+	else:
+		animated_sprite.play("run")
+	
 	if direction != 0:
 		velocity.x = direction * SPEED
 	else:
