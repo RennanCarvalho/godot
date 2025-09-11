@@ -1,6 +1,14 @@
-TileMap
+Node
 CollisionShape2D
+AnimatedSprite2D
+TileMapLayer
+ParallaxBackground
+ParallaxLayer
+Timer
+Area2D
+AnimationPlayer
+Sprite2D
+AnimatableBody2D
+TileMap
 StaticBody2D
 Camera2D
-AnimatedSprite2D
-CharacterBody2D

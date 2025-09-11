@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
-var canDoubleJump = false
+var canDoubleJump = true
 
 func _physics_process(delta: float) -> void:
  	# Gravidade
@@ -13,12 +13,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
-			canDoubleJump = true  # reseta double jump ao tocar o chão
+			canDoubleJump = true
 		elif canDoubleJump:
 			velocity.y = JUMP_VELOCITY
-			canDoubleJump = false  # usa o double jump
+			canDoubleJump = false
 
-	# Movimento horizontal
+
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction != 0:
 		velocity.x = direction * SPEED

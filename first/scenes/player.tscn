@@ -40,9 +40,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
-radius = 4.77624
+radius = 4.47214
 
 [node name="player" type="CharacterBody2D"]
+z_index = 5
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -50,7 +51,8 @@ position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.890233
+frame = 2
+frame_progress = 0.917319
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
