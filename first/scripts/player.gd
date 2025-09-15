@@ -4,21 +4,21 @@ const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 var canDoubleJump = true
 var healthPoints = 100
-func is_dead() -> bool:
-	return healthPoints <= 0
+func is_dead() -> bool: return healthPoints <= 0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
- 	# Gravidade
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		
 	if is_dead():
-		return  # não processa movimento nem animações
-
+		move_and_slide()
+		return
 	# Pulo
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
+			animated_sprite.play("jump")
 			velocity.y = JUMP_VELOCITY
 			canDoubleJump = true
 		elif canDoubleJump:
@@ -43,10 +43,11 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func _on_slime_2_do_damage(damage: int) -> void:
-	if is_dead():
-		animated_sprite.play("death")
-		healthPoints = 100
-		get_tree().reload_current_scene()
+func _on_slime_do_damage(damage: int) -> void:
 	healthPoints -= damage
 	print("health points: ", healthPoints, " damage: ", damage)
+
+	if is_dead():
+		animated_sprite.play("death")
+		await animated_sprite.animation_finished
+		get_tree().reload_current_scene()
