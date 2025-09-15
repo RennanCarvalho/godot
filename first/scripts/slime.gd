@@ -1,7 +1,7 @@
 extends Node2D
 const SPEED= 60
 var direction = 1
-signal doDamage(value : int)
+signal doDamage(damage : int)
 
 @onready var ray_cast_right: RayCast2D = $"ray-cast-right"
 @onready var ray_cast_left: RayCast2D = $"ray-cast-left"
