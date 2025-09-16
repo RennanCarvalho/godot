@@ -1,5 +1,8 @@
-RayCast2D
+AnimationPlayer
+AudioStreamPlayer2D
 Node
+Label
+RayCast2D
 CollisionShape2D
 AnimatedSprite2D
 TileMapLayer
@@ -7,9 +10,5 @@ ParallaxBackground
 ParallaxLayer
 Timer
 Area2D
-AnimationPlayer
 Sprite2D
 AnimatableBody2D
-TileMap
-StaticBody2D
-Camera2D

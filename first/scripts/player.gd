@@ -1,8 +1,6 @@
 extends CharacterBody2D
-
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
-var jumping : bool = false
 var canDoubleJump = true
 var healthPoints = 100
 func is_dead() -> bool: return healthPoints <= 0
@@ -12,10 +10,6 @@ func is_dead() -> bool: return healthPoints <= 0
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		jumping = true
-		animated_sprite.play("jump")
-	else:
-		jumping = false
 		
 	if is_dead():
 		move_and_slide()
@@ -36,14 +30,18 @@ func _physics_process(delta: float) -> void:
 	elif direction < 0: animated_sprite.flip_h = true
 	
 	
-	if direction == 0 and !jumping:
-		animated_sprite.play("idle")
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if is_on_floor():		
+		if direction == 0:
+			animated_sprite.play("idle")
+		else:
+			animated_sprite.play("run")
+	else:
+		animated_sprite.play("jump")
 	
-	if direction > 0 and !jumping:
-		animated_sprite.play("run")
-	velocity.x = direction * SPEED
-		
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
 
 func _on_slime_do_damage(damage: int) -> void:

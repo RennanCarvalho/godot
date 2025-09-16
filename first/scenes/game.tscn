@@ -1,11 +1,13 @@
-[gd_scene load_steps=18 format=4 uid="uid://cxyaipnja7ua0"]
+[gd_scene load_steps=20 format=4 uid="uid://cxyaipnja7ua0"]
 
+[ext_resource type="Script" uid="uid://i8dwp7nw6wpy" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://c6w4q5g4dbbif" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://bnydm573sod7a" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dim5to1chpdbh" path="res://scenes/platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bu64hj23vkrh7" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bao6t0qtvah14" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://bpufcb4wm776k" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://ccnle6dmr3mv4" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p57ef"]
 
@@ -386,6 +388,21 @@ _data = {
 
 [node name="game" type="Node2D"]
 
+[node name="gameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_gee14")
+
+[node name="scoreLable" type="Label" parent="gameManager"]
+offset_left = 651.0
+offset_top = -480.0
+offset_right = 744.0
+offset_bottom = -415.0
+theme_override_colors/font_color = Color(0.0980392, 0.313726, 0.752941, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "you collected x coins"
+autowrap_mode = 2
+
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(11, 31)
 collision_layer = 2
@@ -454,6 +471,18 @@ position = Vector2(248, 132)
 
 [node name="slime3" parent="enemies" instance=ExtResource("6_p57ef")]
 position = Vector2(302, 132)
+
+[node name="lables" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="lables"]
+offset_left = -121.0
+offset_top = 29.0
+offset_right = 51.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0.0980392, 0.313726, 0.752941, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump"
 
 [connection signal="doDamage" from="enemies/slime2" to="player" method="_on_slime_do_damage"]
 [connection signal="doDamage" from="enemies/slime3" to="player" method="_on_slime_do_damage"]
