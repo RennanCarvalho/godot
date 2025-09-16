@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
+var jumping : bool = false
 var canDoubleJump = true
 var healthPoints = 100
 func is_dead() -> bool: return healthPoints <= 0
@@ -11,6 +12,10 @@ func is_dead() -> bool: return healthPoints <= 0
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		jumping = true
+		animated_sprite.play("jump")
+	else:
+		jumping = false
 		
 	if is_dead():
 		move_and_slide()
@@ -18,7 +23,6 @@ func _physics_process(delta: float) -> void:
 	# Pulo
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
-			animated_sprite.play("jump")
 			velocity.y = JUMP_VELOCITY
 			canDoubleJump = true
 		elif canDoubleJump:
@@ -31,23 +35,20 @@ func _physics_process(delta: float) -> void:
 	if direction > 0: animated_sprite.flip_h = false
 	elif direction < 0: animated_sprite.flip_h = true
 	
-	if direction == 0:
-		animated_sprite.play("idle")
-	else:
-		animated_sprite.play("run")
 	
-	if direction != 0:
-		velocity.x = direction * SPEED
-	else:
+	if direction == 0 and !jumping:
+		animated_sprite.play("idle")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
+	if direction > 0 and !jumping:
+		animated_sprite.play("run")
+	velocity.x = direction * SPEED
+		
 	move_and_slide()
 
 func _on_slime_do_damage(damage: int) -> void:
 	healthPoints -= damage
-	print("health points: ", healthPoints, " damage: ", damage)
-
 	if is_dead():
 		animated_sprite.play("death")
-		await animated_sprite.animation_finished
+		animated_sprite.animation_finished
 		get_tree().reload_current_scene()
