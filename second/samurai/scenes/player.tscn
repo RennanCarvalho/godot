@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://8fp3au7s0kso"]
+[gd_scene load_steps=18 format=3 uid="uid://8fp3au7s0kso"]
 
 [ext_resource type="Texture2D" uid="uid://duecesj2rkmii" path="res://assets/sprites/samurai.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bdqyusmainvhd" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://dpik4ijmpul40" path="res://scripts/state_machine.gd" id="3_qhqgy"]
 [ext_resource type="Script" uid="uid://ns8cou8uss6n" path="res://scripts/idle.gd" id="4_dqkch"]
 [ext_resource type="Script" uid="uid://cmgp1at0k38dy" path="res://scripts/jump.gd" id="5_qlg0r"]
+[ext_resource type="Script" uid="uid://d2kct41c72btp" path="res://scenes/move.gd" id="6_tuyoq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -97,10 +98,11 @@ script = ExtResource("1_g2els")
 [node name="animations" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_d2wvv")
-animation = &"idle"
-frame_progress = 0.745916
+animation = &"run"
+frame_progress = 0.920198
 
 [node name="collision" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(1, -6)
 shape = SubResource("CapsuleShape2D_3vyb7")
 
@@ -112,5 +114,9 @@ starting_state = NodePath("idle")
 script = ExtResource("4_dqkch")
 jump_state = NodePath("../jump")
 
-[node name="jump" type="Node" parent="state_machine"]
+[node name="jump" type="Node" parent="state_machine" node_paths=PackedStringArray("idle_state")]
 script = ExtResource("5_qlg0r")
+idle_state = NodePath("../idle")
+
+[node name="move" type="Node" parent="state_machine"]
+script = ExtResource("6_tuyoq")
