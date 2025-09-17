@@ -1,8 +1,4 @@
 res://scenes/game.tscn
 res://scenes/killzone.tscn
-res://scripts/player.gd
-res://scenes/player.tscn
-res://scripts/game_manager.gd
-res://scripts/coin.gd
-res://default_bus_layout.tres
-res://scenes/coin.tscn
+res://scripts/killzone.gd
+res://scenes/slime.tscn

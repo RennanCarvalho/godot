@@ -444,6 +444,12 @@ position = Vector2(279, 103)
 [node name="coin3" parent="coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(424, 70)
 
+[node name="coin4" parent="coins" instance=ExtResource("4_lbhrr")]
+position = Vector2(432, -12)
+
+[node name="coin5" parent="coins" instance=ExtResource("4_lbhrr")]
+position = Vector2(671, -68)
+
 [node name="platforms" type="Node" parent="."]
 
 [node name="platform" parent="platforms" instance=ExtResource("3_lnu2h")]
