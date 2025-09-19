@@ -1,0 +1,31 @@
+/* hair-eyes */
+hair-base: #14182e
+hair-shadow: #28325a
+hair-light: #5a6ea0
+eyes: #1e1e1e
+
+/* skin */
+skin-base: #efc49c
+skin-shadow: #c9976e
+skin-light: #ffddba
+
+/* kimono */
+kimono-base: #e6e6e6
+kimono-shadow: #b4b4b4
+kimono-light: #fff
+
+kimono-arm-base: #78788c
+kimono-arm-shadow: #5a5a6e
+kimono-arm-light: #a0a0be
+kimono-belt: #121010
+
+/* katana */
+katana-base: #c8c8dc
+katana-blade: #707070
+katana-handle: #390d11
+
+/* leg */
+leg-base: #3c1446
+leg-shadow: #280a32
+leg-light: #6e3282
+shoe: #282828
