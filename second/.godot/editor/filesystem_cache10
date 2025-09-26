@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1758901534
+icon.svg::CompressedTexture2D::6286226209213921150::1758898483::1758898487::1::::<><><>0<>0<>389a9d01ab14bf9b1707465f000cfb04<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://assets/::1758901537
+::res://assets/sprites/::1758902106
+paper-draw.png::CompressedTexture2D::3586172339254643200::1758901751::1758908202::1::::<><><>0<>0<>95f3969e9e801bc77ded0fc52df00a86<>res://.godot/imported/paper-draw.png-0294000898a7d8d3252b8a330bd36864.ctex::
+paper-lose.png::CompressedTexture2D::6817170513727043446::1758901445::1758908202::1::::<><><>0<>0<>fa40f143e3543b4fdf27c379077bdee4<>res://.godot/imported/paper-lose.png-d62ee03fbac8b8fc5768f85629115990.ctex::
+paper-win.png::CompressedTexture2D::4280883693919501362::1758901797::1758908202::1::::<><><>0<>0<>dec2496b6a4e5061bcbee95b69bbb18d<>res://.godot/imported/paper-win.png-0192428915166d1fb28b4bfefb047d95.ctex::
+rock-draw.png::CompressedTexture2D::540767295941541770::1758901191::1758908203::1::::<><><>0<>0<>3d14faa6e76cc715231b54ca3ef787d8<>res://.godot/imported/rock-draw.png-030900e101d9a164f9aa7d5ee5664179.ctex::
+rock-lose.png::CompressedTexture2D::4936465845312281409::1758901178::1758908203::1::::<><><>0<>0<>34944243ef1f6d0c23ba1a203627cf8c<>res://.godot/imported/rock-lose.png-6636e09dbeda83cba2f9437546a3cdd1.ctex::
+rock-win.png::CompressedTexture2D::7642459978208455232::1758901201::1758908203::1::::<><><>0<>0<>795ceea6a9e85d81437b6ebcbec59e5b<>res://.godot/imported/rock-win.png-02b58dd88f88130a09c88bfec332633a.ctex::
+scissor-draw.png::CompressedTexture2D::7338866433550150721::1758902060::1758908203::1::::<><><>0<>0<>da8bedc5a36a11a203f01b1064db8c51<>res://.godot/imported/scissor-draw.png-13152903cb0471d460a2e12015f9eee4.ctex::
+scissor-lose.png::CompressedTexture2D::423545647109268201::1758901918::1758908202::1::::<><><>0<>0<>0cf438d3c504c2c69f306eb753bfe15e<>res://.godot/imported/scissor-lose.png-e4f0f575ea53cd9016c12dbde5c91f63.ctex::
+scissor-win.png::CompressedTexture2D::3529225669013167396::1758902045::1758908202::1::::<><><>0<>0<>c59e6780f001e2550d63262614ed2530<>res://.godot/imported/scissor-win.png-d877319d1c0490ae2388e33b1ce3eeb3.ctex::
+::res://scenes/::1758898787
+jankenpon.tscn::PackedScene::6732585278824111523::1758898787::0::1::::<><><>0<>0<><>::
