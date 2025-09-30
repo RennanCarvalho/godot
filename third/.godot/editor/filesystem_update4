@@ -1,0 +1,4 @@
+res://scenes/player.tscn
+res://scenes/jankenpon.tscn
+res://scenes/object.tscn
+res://scripts/object.gd

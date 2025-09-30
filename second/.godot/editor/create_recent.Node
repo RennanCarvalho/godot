@@ -1,3 +1,5 @@
-Sprite2D
-Node
-Camera2D
+TileMapLayer
+CollisionShape2D
+StaticBody2D
+AnimatedSprite2D
+CharacterBody2D
