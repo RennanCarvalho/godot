@@ -11,6 +11,7 @@ scale = Vector2(4, 4)
 position = Vector2(96.5, 56)
 
 [node name="floor" type="StaticBody2D" parent="."]
+position = Vector2(128.25, 160.75)
 
 [node name="collision" type="CollisionShape2D" parent="floor"]
 shape = SubResource("WorldBoundaryShape2D_3fkud")

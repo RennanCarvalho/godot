@@ -1,3 +1,15 @@
 res://scenes/player.tscn
 res://scenes/world-1.tscn
 res://scripts/player.gd
+res://scripts/state.gd
+res://scripts/state-machine.gd
+res://scenes/state_machine.tscn
+res://scripts/state_machine.gd
+res://scripts/logger.gd
+res://scripts/globals.gd
+res://scripts/core/globals.gd
+res://scripts/core/Globals.gd
+res://scripts/core/global.gd
+res://scenes/core/game_manager.tscn
+res://scripts/core/core.gd
+res://scripts/core/logger.gd
