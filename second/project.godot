@@ -11,15 +11,13 @@ config_version=5
 [application]
 
 config/name="platform"
-run/main_scene="res://scenes/world_01.tscn"
+run/main_scene="uid://dc32h1s80rtmi"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=320
-window/stretch/mode="viewport"
+window/canvas_textures/default_texture_filter=1
 
 [rendering]
 
