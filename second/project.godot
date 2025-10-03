@@ -11,16 +11,19 @@ config_version=5
 [application]
 
 config/name="platform"
-run/main_scene="uid://dc32h1s80rtmi"
+run/main_scene="uid://kc713ofs8oa5"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-_globals="*res://scripts/core/globals.gd"
+globals="*res://scenes/core/globals.tscn"
 
 [display]
 
+window/size/viewport_width=640
+window/size/viewport_height=320
+window/stretch/mode="viewport"
 window/canvas_textures/default_texture_filter=1
 
 [rendering]
