@@ -9,4 +9,4 @@ static var instance: Globals = null
 func _ready():
 	instance = self
 	Logger.level = LOG_LEVEL
-	Logger.error("Loading globals ...", self)
+	Logger.info("Loading globals ...", self)

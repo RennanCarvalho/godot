@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1759862600
+::res://::1760099468
 icon.svg::CompressedTexture2D/CompressedTexture2D::957142967987926837::1759409685::1759409690::1::::<><><>0<>0<>083ea6dc5e526054abcd5c6b5a2bb43b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1759409613
 ::res://assets/fx/::1759409521
@@ -133,20 +133,27 @@ Rock_shape (16 x 16).png::CompressedTexture2D/CompressedTexture2D::6252007437745
 Snack_machine_Bench_Trash_bin (16 x 16).png::CompressedTexture2D/CompressedTexture2D::4630066605827650397::1759409048::1759409690::1::::<><><>0<>0<>5b31f0155f77408cc6727618c962e62e<>res://.godot/imported/Snack_machine_Bench_Trash_bin (16 x 16).png-b7c787155d1f93880bdbfbfa64b7f312.ctex::
 Water_frames (16 x 32).png::CompressedTexture2D/CompressedTexture2D::1207092270657961433::1759409048::1759409690::1::::<><><>0<>0<>302a038d87a5025d35dcb8f2bc4ed9d1<>res://.godot/imported/Water_frames (16 x 32).png-e571819091b46e3191a0d92a50b05857.ctex::
 ::res://resources/::1759514689
-::res://resources/tilesets/::1759512385
-level.tres::TileSet::6095135708627839441::1759512385::0::1::::<><><>0<>0<><>::uid://dangdf46b78vf::::res://assets/tileset/1 - Grassland/Terrain (16 x 16).png<>uid://c3lj3db2kaavi::::res://assets/tileset/1 - Grassland/Grassland_entities (16 x 16).png
-::res://scenes/::1759514752
-player.tscn::PackedScene::5458539337917705251::1759510182::0::1::::<><><>0<>0<><>::uid://bt1rnvw53l07c::::res://assets/sprite-pack/1 - Onion Lad/Idle (16 x 16).png<>uid://b6g1c5ldj7rt3::::res://scripts/player.gd<>uid://dr0tkikfqixvf::::res://assets/sprite-pack/1 - Onion Lad/Run_&_Jump (16 x 16).png
-state_machine.tscn::PackedScene/PackedScene::5775196552477523135::1759434865::0::1::::<><><>0<>0<><>::uid://cigb3y07ghj3k::::res://scripts/state_machine.gd
-world-1.tscn::PackedScene::7359095569778121636::1759514752::0::1::::<><><>0<>0<><>::uid://cj1fl0jlacin0::::res://scenes/player.tscn<>uid://cs3r821f8vqm8::::res://resources/tilesets/level.tres
-::res://scenes/core/::1759514752
-game_manager.tscn::PackedScene::708008058832107806::1759514752::0::1::::<><><>0<>0<><>::uid://dc32h1s80rtmi::::res://scenes/world-1.tscn
-globals.tscn::PackedScene::2226576963599898436::1759495904::0::1::::<><><>0<>0<><>::uid://bybai3byvvb5u::::res://scripts/core/globals.gd
-::res://scripts/::1759514421
-player.gd::GDScript::4576244909239165718::1759500150::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://resources/tilesets/::1760097388
+level.tres::TileSet/TileSet::6095135708627839441::1760097388::0::1::::<><><>0<>0<><>::uid://dangdf46b78vf::::res://assets/tileset/1 - Grassland/Terrain (16 x 16).png<>uid://c3lj3db2kaavi::::res://assets/tileset/1 - Grassland/Grassland_entities (16 x 16).png
+::res://scenes/::1760099225
+state_machine.tscn::PackedScene/PackedScene::5775196552477523135::1760099225::0::1::::<><><>0<>0<><>::uid://cigb3y07ghj3k::::res://scripts/state_machine.gd
+::res://scenes/characters/::1760099450
+player.tscn::PackedScene::5458539337917705251::1760099450::0::1::::<><><>0<>0<><>::uid://bt1rnvw53l07c::::res://assets/sprite-pack/1 - Onion Lad/Idle (16 x 16).png<>uid://b6g1c5ldj7rt3::::res://scripts/player.gd<>uid://dr0tkikfqixvf::::res://assets/sprite-pack/1 - Onion Lad/Run_&_Jump (16 x 16).png<>uid://cojsv43i1p5i6::::res://scenes/state_machine.tscn<>uid://7d3vy8joktok::::res://scripts/gameplay/player_input.gd<>uid://cssl1yruledwe::::res://scripts/states/roam.gd
+::res://scenes/core/::1760099225
+game_manager.tscn::PackedScene/PackedScene::708008058832107806::1760099225::0::1::::<><><>0<>0<><>::uid://dc32h1s80rtmi::::res://scenes/levels/world-1.tscn
+globals.tscn::PackedScene/PackedScene::2226576963599898436::1760099225::0::1::::<><><>0<>0<><>::uid://bybai3byvvb5u::::res://scripts/core/globals.gd
+::res://scenes/levels/::1760099225
+world-1.tscn::PackedScene/PackedScene::7359095569778121636::1760099225::0::1::::<><><>0<>0<><>::uid://cj1fl0jlacin0::::res://scenes/characters/player.tscn<>uid://cs3r821f8vqm8::::res://resources/tilesets/level.tres
+::res://scripts/::1760098821
+player.gd::GDScript/GDScript::4576244909239165718::1759500150::0::1::::<>CharacterBody2D<><>0<>0<><>::
 state.gd::GDScript/GDScript::6803831150360423222::1759426632::0::1::::State<>Node<><>0<>0<><>::
-state_machine.gd::GDScript::5346850402879675326::1759514421::0::1::::StateMachine<>Node<><>0<>0<><>::
-::res://scripts/core/::1759495904
-enums.gd::GDScript::1695210641223498894::1759493584::0::1::::Enums<>Node<><>0<>0<><>::
-globals.gd::GDScript::4073033068429126476::1759495904::0::1::::Globals<>Node<><>0<>0<><>::
-logger.gd::GDScript::5822744380695240621::1759495895::0::1::::Logger<>Node<><>0<>0<><>::
+state_machine.gd::GDScript/GDScript::5346850402879675326::1760098603::0::1::::StateMachine<>Node<><>0<>0<><>::
+::res://scripts/core/::1760097699
+enums.gd::GDScript/GDScript::1695210641223498894::1759493584::0::1::::Enums<>Node<><>0<>0<><>::
+globals.gd::GDScript/GDScript::4073033068429126476::1760097699::0::1::::Globals<>Node<><>0<>0<><>::
+logger.gd::GDScript/GDScript::5822744380695240621::1759495895::0::1::::Logger<>Node<><>0<>0<><>::
+::res://scripts/gameplay/::1760099468
+character_inpu.gd::GDScript::2708825356997127511::1760099461::0::1::::<>Node<><>0<>0<><>::
+player_input.gd::GDScript::2253975019115671618::1760099450::0::1::::<>CharacterInput<><>0<>0<><>::
+::res://scripts/states/::1760098603
+roam.gd::GDScript/GDScript::6074114957751467532::1760098603::0::1::::<>State<><>0<>0<><>::

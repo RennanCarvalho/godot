@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://kc713ofs8oa5"]
 
-[ext_resource type="PackedScene" uid="uid://dc32h1s80rtmi" path="res://scenes/world-1.tscn" id="1_k3ko1"]
+[ext_resource type="PackedScene" uid="uid://dc32h1s80rtmi" path="res://scenes/levels/world-1.tscn" id="1_k3ko1"]
 
 [node name="game-manager" type="Node"]
 
@@ -29,6 +29,4 @@ size_2d_override = Vector2i(640, 320)
 size_2d_override_stretch = true
 render_target_update_mode = 4
 
-[node name="level" type="Node" parent="Control/SubViewportContainer/SubViewport"]
-
-[node name="world-1" parent="Control/SubViewportContainer/SubViewport/level" instance=ExtResource("1_k3ko1")]
+[node name="level" parent="Control/SubViewportContainer/SubViewport" instance=ExtResource("1_k3ko1")]

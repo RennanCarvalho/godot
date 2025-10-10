@@ -1,8 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cj1fl0jlacin0"]
+[gd_scene load_steps=16 format=3 uid="uid://cj1fl0jlacin0"]
 
 [ext_resource type="Texture2D" uid="uid://bt1rnvw53l07c" path="res://assets/sprite-pack/1 - Onion Lad/Idle (16 x 16).png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://b6g1c5ldj7rt3" path="res://scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://dr0tkikfqixvf" path="res://assets/sprite-pack/1 - Onion Lad/Run_&_Jump (16 x 16).png" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://dxyr0btn4sc12" path="res://scripts/gameplay/character_movement.gd" id="4_6eyoc"]
+[ext_resource type="PackedScene" uid="uid://cojsv43i1p5i6" path="res://scenes/state_machine.tscn" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://k7ilbgev2vew" path="res://scripts/gameplay/character_animation.gd" id="4_eojnx"]
+[ext_resource type="Script" uid="uid://bkaeps0y36qmg" path="res://scripts/gameplay/player_input.gd" id="4_kqtwu"]
+[ext_resource type="Script" uid="uid://cssl1yruledwe" path="res://scripts/states/roam.gd" id="5_atpat"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("1_g2els")
@@ -65,10 +70,31 @@ height = 10.0
 script = ExtResource("1_qhqgy")
 
 [node name="animated-sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_ur7pv")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
+script = ExtResource("4_eojnx")
 
-[node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+[node name="collider" type="CollisionShape2D" parent="."]
+position = Vector2(8, 11)
 shape = SubResource("CapsuleShape2D_y4r1p")
+
+[node name="movement" type="Node" parent="." node_paths=PackedStringArray("character", "characterInput")]
+script = ExtResource("4_6eyoc")
+character = NodePath("..")
+characterInput = NodePath("../input")
+
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2(8, 8)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="state-machine" parent="." node_paths=PackedStringArray("current_state") instance=ExtResource("4_dqkch")]
+current_state = NodePath("roam")
+
+[node name="roam" type="Node" parent="state-machine"]
+script = ExtResource("5_atpat")
+
+[node name="input" type="Node" parent="."]
+script = ExtResource("4_kqtwu")

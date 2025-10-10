@@ -1,3 +1,6 @@
+res://scripts/gameplay
+res://scenes/characters
+res://scripts/states
 res://resources/tilesets
 res://resources
 res://scenes/core
